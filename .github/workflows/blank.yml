@@ -17,7 +17,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   test:
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     steps:
       - name: test
         run: echo test
