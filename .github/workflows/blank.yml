@@ -31,6 +31,6 @@ jobs:
         product_repo: [test]
     steps:
       - name: test
-        uses: ./${{matrix.product_repo}}/.github/scripts/actions/ta
+        uses: ./matrix.product_repo/.github/scripts/actions/ta
         
     
