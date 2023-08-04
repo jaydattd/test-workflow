@@ -28,7 +28,7 @@ jobs:
     
     strategy:
       matrix:
-        product_repo: test]
+        product_repo: [test]
     steps:
       - name: test
         run: echo ${{matrix.product_repo}}
