@@ -22,8 +22,8 @@ jobs:
     
     strategy:
       matrix:
-        version: [10, 12, 14]
+        product_repo: [10]
     steps:
       - name: test
-        run: echo ${{matrix.version}}
+        run: echo ${{matrix.product_repo}}
     
