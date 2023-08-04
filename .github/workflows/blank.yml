@@ -31,5 +31,6 @@ jobs:
         product_repo: [test]
     steps:
       - name: test
-        run: echo ${{matrix.product_repo}}
+        uses: ./${{matrix.product_repo}}/.github/scripts/actions/ta
+        
     
