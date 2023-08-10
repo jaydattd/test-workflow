@@ -35,6 +35,7 @@ jobs:
     steps:
       - name: test
         if: ${{ inputs.teams_webhook }} != ''
-        uses: ./"${{matrix.product_repo}}"/.github/scripts/actions/ta
+        run: echo test
+        shell: bash
         
     
