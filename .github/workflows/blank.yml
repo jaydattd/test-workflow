@@ -5,13 +5,20 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      teams_webhook:
+        description: "Teams webhook (set in CI files)"
+        default: ''
+        type: string
+        required: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -31,6 +38,7 @@ jobs:
         product_repo: [test]
     steps:
       - name: test
+        if: ${{ inputs.teams_webhook }} != ''
         uses: ./"${{matrix.product_repo}}"/.github/scripts/actions/ta
         
     
