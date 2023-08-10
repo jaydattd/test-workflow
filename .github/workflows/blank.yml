@@ -15,26 +15,21 @@ on:
     inputs:
       teams_webhook:
         description: "Teams webhook (set in CI files)"
-        default: ''
+        default: 'None'
         type: string
         required: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: test
-        run: echo test
-  build:
-    needs: test
+  
+  build:  
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
         
     steps:
       - name: test
-        if: ${{ inputs.teams_webhook }} != ''
+        if: ${{ inputs.teams_webhook }} != 'None'
         run: echo test
         shell: bash
         
