@@ -29,7 +29,7 @@ jobs:
         
     steps:
       - name: test
-        if: ${{ inputs.teams_webhook }} != 'None'
+        if: ${{ inputs.teams_webhook != 'None'}} 
         run: echo test
         shell: bash
         
