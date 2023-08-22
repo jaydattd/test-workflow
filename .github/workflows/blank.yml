@@ -23,4 +23,4 @@ on:
 jobs:
  
   test:  
-    uses: jaydattd/test-reusable/.github/workflows/blank.yml@main
+    uses: test-reusable/.github/workflows/blank.yml@main
