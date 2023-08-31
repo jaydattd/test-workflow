@@ -32,4 +32,4 @@ jobs:
             path: test-reusable
     
         - name: call workflow    
-          uses: test-reusable/.github/workflows/blank.yml
+          uses: ./test-reusable/.github/workflows/blank.yml
