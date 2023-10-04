@@ -17,11 +17,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout tools repo
-          uses: actions/checkout@v3
-          with:
-            repository: jaydattd/test-reusable
-            path: test-reusable
+      - name: print called workflow
+        run: echo {{ github.ref }}
+        # - name: Checkout tools repo
+        #   uses: actions/checkout@v3
+        #   with:
+        #     repository: jaydattd/test-reusable
+        #     path: test-reusable
     
-        - name: call workflow    
-          uses: ./test-reusable/.github/scripts/ta
+        # - name: call workflow    
+        #   uses: ./test-reusable/.github/scripts/ta
