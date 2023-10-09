@@ -19,6 +19,12 @@ jobs:
     steps:
       - name: print called workflow
         run: echo ${{ github.ref }}
+        
+      - name: Run smoke test
+        id: smoke_test_run
+        uses: ./.github/scripts/actions/test
+        
+         
         # - name: Checkout tools repo
         #   uses: actions/checkout@v3
         #   with:
