@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print called workflow
-        run: echo ${{ github.ref }}
+        run: echo ${{ github.GITHUB_WORKFLOW_REF }}
         
-      - name: Run smoke test
-        id: smoke_test_run
-        uses: ./.github/scripts/actions/test
+      # - name: Run smoke test
+      #   id: smoke_test_run
+      #   uses: jaydattd/test-workflow/.github/scripts/actions/test
         
          
         # - name: Checkout tools repo
