@@ -1,0 +1,18 @@
+ 
+runs:
+  using: composite
+  steps:    
+
+    - name: print environment variables
+      run: |
+         echo ${{ inputs.region }}
+         echo ${{ inputs.environment }}
+         echo ${{ inputs.cluster-name }}         
+         echo ${{ env[inputs.key_aws_access_key_id] }}
+         echo ${{ env[inputs.key_aws_secret_access_key] }}         
+      shell: bash
+          
+    - name: Smoke execution
+      shell: bash
+      run: echo Inject your smoke here
+    
