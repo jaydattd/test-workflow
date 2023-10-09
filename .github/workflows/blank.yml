@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print called workflow
-        run: echo ${{ github.GITHUB_WORKFLOW_REF }}
+        run: echo ${{ env.GITHUB_WORKFLOW_REF }}
         
       # - name: Run smoke test
       #   id: smoke_test_run
