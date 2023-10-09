@@ -20,9 +20,9 @@ jobs:
       - name: print called workflow
         run: echo ${{ github.workflow_ref }}
         
-      # - name: Run smoke test
-      #   id: smoke_test_run
-      #   uses: jaydattd/test-workflow/.github/scripts/actions/test
+      - name: Run smoke test
+        id: smoke_test_run
+        uses: ./.github/scripts/actions/test
         
          
         # - name: Checkout tools repo
