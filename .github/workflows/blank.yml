@@ -26,7 +26,7 @@ jobs:
           echo ${{ github.workflow_ref }}
           echo ${{ github.ref }}
           echo ${{ toJson(github) }}
-          echo "${{ toJson(github) }}"
+          # echo "${{ toJson(github) }}"
         
       # - name: Run smoke test
       #   id: smoke_test_run
